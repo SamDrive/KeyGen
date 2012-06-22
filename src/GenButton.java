@@ -1,5 +1,4 @@
 
-
 import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
 import java.awt.event.KeyEvent;
@@ -34,14 +33,14 @@ public class GenButton extends JButton
    /**
     * Action for the "Generate" button.
     * 
-    * @author $Author: $
-    * @version $Revision: $, $Date: $ UTC
+    * @author Hesse D.
+    * @version 0.1
     */
    public final class GenerateAction extends AbstractAction
    {
       private GenerateAction()
       {
-         putValue(Action.NAME, "Generiere..");
+         putValue(Action.NAME, "Generate..");
          putValue(Action.ACCELERATOR_KEY, KeyStroke.getKeyStroke(
                KeyEvent.VK_ENTER, Toolkit.getDefaultToolkit()
                      .getMenuShortcutKeyMask()));
@@ -55,7 +54,7 @@ public class GenButton extends JButton
          {
             // throw new IllegalArgumentException("Zu wenig Argumente!");
             JOptionPane.showMessageDialog(getRootPane(),
-                  "Need more Input(Zahlensystem/Länge)!", "Error!",
+                  "Need more Input(number system/length)!", "Error!",
                   JOptionPane.ERROR_MESSAGE);
          }
          else
@@ -69,9 +68,8 @@ public class GenButton extends JButton
             }
             catch (Exception e)
             {
-               JOptionPane.showMessageDialog(getRootPane(),
-                     e.toString(), e.getClass().toString(),
-                     JOptionPane.ERROR_MESSAGE);
+               JOptionPane.showMessageDialog(getRootPane(), e.toString(), e
+                     .getClass().toString(), JOptionPane.ERROR_MESSAGE);
             }
          }
 

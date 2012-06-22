@@ -45,13 +45,13 @@ public class MainFrame extends JFrame
       inputPanel.setLayout(new GridLayout(2, 2));
       northPanel.setLayout(new BorderLayout());
       
-      northPanel.add(new JLabel("Dein neuer Key:"), BorderLayout.NORTH);
+      northPanel.add(new JLabel("New key:"), BorderLayout.NORTH);
       northPanel.add(keyTF, BorderLayout.SOUTH); //key.createKey()
 
-      
-      inputPanel.add(new JLabel("Zahlensystem (Zahlen):"));
+      //TODO: Drop down menu
+      inputPanel.add(new JLabel("Number system (number):"));
       inputPanel.add(sysTF);
-      inputPanel.add(new JLabel("Key Länge (Zahlen):"));
+      inputPanel.add(new JLabel("Key length:"));
       inputPanel.add(keyLengthTF);
 
       formPanel.add(northPanel, BorderLayout.NORTH);
@@ -64,10 +64,10 @@ public class MainFrame extends JFrame
    }
    
    /**
-    * Return the "Zahlensystem".
+    * Return the "number system".
     * 
     * @return
-    *       Zahlensystem
+    *       number system
     */
    public static String getZahlenSystem()
    {
@@ -78,7 +78,7 @@ public class MainFrame extends JFrame
     * Return the key length.
     * 
     * @return
-    *       Key länge
+    *       key length
     */
    public static String getLength()
    {
@@ -89,7 +89,7 @@ public class MainFrame extends JFrame
     * Set the Key.
     * 
     * @param key
-    *           Neuer Schlüssel
+    *           New key
     */
    public static void setKey(String key)
    {

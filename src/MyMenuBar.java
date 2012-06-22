@@ -1,5 +1,3 @@
-
-
 import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
 import java.awt.event.KeyEvent;
@@ -54,12 +52,12 @@ public class MyMenuBar extends JMenuBar
     * Constructor.
     * 
     * @param frame
-    *           blabla Frame
+    *           main frame
     */
    public MyMenuBar(JFrame frame)
    {
-      JMenu datei = new JMenu("Datei");
-      JMenu hilf = new JMenu("Hilfe");
+      JMenu datei = new JMenu("File");
+      JMenu hilf = new JMenu("Help");
 
       add(datei);
       add(new LaFMenu(frame));
@@ -74,8 +72,8 @@ public class MyMenuBar extends JMenuBar
    /**
     * Action for the "Design" Menu.
     * 
-    * @author $Author: $
-    * @version $Revision: $, $Date: $ UTC
+    * @author Hesse D.
+    * @version 0.1
     */
    private class LaFMenu extends JMenu
    {
@@ -133,8 +131,8 @@ public class MyMenuBar extends JMenuBar
    /**
     * Action for the "Exit" Menuitem.
     * 
-    * @author $Author: $
-    * @version $Revision: $, $Date: $ UTC
+    * @author Hesse D.
+    * @version 0.1
     */
    private final class ExitAction extends AbstractAction
    {
@@ -156,8 +154,8 @@ public class MyMenuBar extends JMenuBar
    /**
     * Action for the "Info" Menuitem.
     * 
-    * @author $Author: $
-    * @version $Revision: $, $Date: $ UTC
+    * @author Hesse D.
+    * @version 0.1
     */
    private final class HilfAction extends AbstractAction
    {
@@ -173,21 +171,21 @@ public class MyMenuBar extends JMenuBar
       public void actionPerformed(ActionEvent arg0)
       {
          JOptionPane.showMessageDialog(getRootPane(),
-               "Erstellt bei: Hesse Dominik\n" + "Version: 0.1");
+               "Create by: Hesse Dominik\n" + "Version: 0.1");
       }
    }
 
    /**
     * Action for the "Info" Menuitem.
     * 
-    * @author $Author: $
-    * @version $Revision: $, $Date: $ UTC
+    * @author Hesse D.
+    * @version 0.1
     */
    private final class InfoAction extends AbstractAction
    {
       private InfoAction()
       {
-         putValue(Action.NAME, "Hilfe");
+         putValue(Action.NAME, "Help");
          putValue(Action.ACCELERATOR_KEY, KeyStroke.getKeyStroke(
                KeyEvent.VK_H, Toolkit.getDefaultToolkit()
                      .getMenuShortcutKeyMask()));
@@ -197,11 +195,8 @@ public class MyMenuBar extends JMenuBar
       public void actionPerformed(ActionEvent arg0)
       {
          JOptionPane.showMessageDialog(getRootPane(),
-               "Zahlensystem: Gib ein aus was der Key maximal bestehn soll\n"
-                     + "z.b. 10 für Zahlen 0-9\n"
-                     + "16 für Zahlen 0-9 und die ersten 6 Buchstaben \n"
-                     + "36 für alle Zahlen und Buchstaben\n\n"
-                     + "Key Länge: Wie lang soll der Key sein.\n");
+               "Number system: in progress\n"
+                     + "Key length: How long is the new key.\n");
       }
    }
 

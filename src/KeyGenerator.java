@@ -53,10 +53,10 @@ public class KeyGenerator
    }
    
    /**
-    * Set the "Zahlensystem".
+    * Set the "number system".
     * 
     * @param sys
-    *           zahlensystem.
+    *           number system.
     */
    public final void setZahlenSys(int sys)
    {
@@ -67,7 +67,7 @@ public class KeyGenerator
     * Set the length of the new key.
     * 
     * @param len
-    *           Länge.
+    *           length
     */
    public final void setLength(int len)
    {
