@@ -1,4 +1,4 @@
-package server_keygen;
+package KeyGen;
 
 import java.util.Random;
 
