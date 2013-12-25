@@ -1,6 +1,6 @@
 KeyGen
 ======
 
-Generates a random key for you wlan or other passwords.
+Generates a random 6-digit key in hexadecimal that can be used for passwords.
 
-Choose the number system and the key length and then click on "Generate".
+Includes a button to copy the key to clipboard

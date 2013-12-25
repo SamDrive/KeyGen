@@ -1,11 +1,11 @@
-
+package server_keygen;
 
 import javax.swing.SwingUtilities;
 
 /**
  * Main for the KeyGen.
  * 
- * @author Hesse D.
+ * @author Hesse D. Edited by Alex Wang
  * @version 0.1, 21.02.2012, 22:18
  */
 public class Main

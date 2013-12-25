@@ -1,4 +1,4 @@
-
+package server_keygen;
 
 import java.awt.BorderLayout;
 import java.awt.GridLayout;
@@ -8,11 +8,12 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
+import javax.swing.UIManager;
 
 /**
- * Create a new JFrame.
+ * Creates a new JFrame.
  * 
- * @author Hesse D.
+ * @author Hesse D. Edited by Alex Wang
  * @version 0.1
  */
 @SuppressWarnings("serial")
@@ -27,7 +28,7 @@ public class MainFrame extends JFrame
     */
    public MainFrame()
    {
-      super("Key generator");
+      super("Server Ticket Generator");
       JFrame.setDefaultLookAndFeelDecorated(true);
       setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
       setJMenuBar(new MyMenuBar(this));
@@ -45,20 +46,21 @@ public class MainFrame extends JFrame
       inputPanel.setLayout(new GridLayout(2, 2));
       northPanel.setLayout(new BorderLayout());
       
-      northPanel.add(new JLabel("New key:"), BorderLayout.NORTH);
+      northPanel.add(new JLabel("Generated Ticket:"), BorderLayout.NORTH);
       northPanel.add(keyTF, BorderLayout.SOUTH); //key.createKey()
 
       //TODO: Drop down menu
-      inputPanel.add(new JLabel("Number system (number):"));
+      /*inputPanel.add(new JLabel("Number system (Base Number):"));
       inputPanel.add(sysTF);
       inputPanel.add(new JLabel("Key length:"));
-      inputPanel.add(keyLengthTF);
+      inputPanel.add(keyLengthTF);*/
 
       formPanel.add(northPanel, BorderLayout.NORTH);
       formPanel.add(inputPanel, BorderLayout.SOUTH);
       panel.add(formPanel, BorderLayout.CENTER);
       
-      panel.add(new GenButton(), BorderLayout.SOUTH);
+      panel.add(new CopyButton(), BorderLayout.SOUTH);
+      panel.add(new GenButton(), BorderLayout.EAST);
       
       add(panel);
    }
@@ -86,13 +88,18 @@ public class MainFrame extends JFrame
    }
    
    /**
-    * Set the Key.
+    * Sets the Key.
     * 
     * @param key
     *           New key
     */
    public static void setKey(String key)
    {
-      keyTF.setText(key);
+      keyTF.setText("rc"+key);
+   }
+   
+   public static String getKey()
+   {
+       return keyTF.getText();
    }
 }

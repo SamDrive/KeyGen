@@ -1,3 +1,6 @@
+package server_keygen;
+
+
 import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
 import java.awt.event.KeyEvent;
@@ -19,7 +22,7 @@ import javax.swing.UIManager.LookAndFeelInfo;
  * The Menu for the Windowbar.
  * 
  * 
- * @author Hesse D.
+ * @author Hesse D. Edited by Alex Wang
  * @version 0.1
  */
 @SuppressWarnings("serial")
@@ -79,7 +82,7 @@ public class MyMenuBar extends JMenuBar
    {
       public LaFMenu(final JFrame lookandfeelframe)
       {
-         super("Design");
+         super("Theme");
          for (final LookAndFeelInfo lookandfeelinfo : UIManager
                .getInstalledLookAndFeels())
          {
@@ -171,7 +174,8 @@ public class MyMenuBar extends JMenuBar
       public void actionPerformed(ActionEvent arg0)
       {
          JOptionPane.showMessageDialog(getRootPane(),
-               "Create by: Hesse Dominik\n" + "Version: 0.1");
+               "[Original \"KeyGen\"] https://github.com/SamDrive/KeyGen\n"
+         + "Created by: Hesse Dominik\nEdited/Translated by: Alex Wang\n" + "Version: 0.1");
       }
    }
 
@@ -185,7 +189,7 @@ public class MyMenuBar extends JMenuBar
    {
       private InfoAction()
       {
-         putValue(Action.NAME, "Help");
+         putValue(Action.NAME, "Usage");
          putValue(Action.ACCELERATOR_KEY, KeyStroke.getKeyStroke(
                KeyEvent.VK_H, Toolkit.getDefaultToolkit()
                      .getMenuShortcutKeyMask()));
@@ -195,8 +199,8 @@ public class MyMenuBar extends JMenuBar
       public void actionPerformed(ActionEvent arg0)
       {
          JOptionPane.showMessageDialog(getRootPane(),
-               "Number system: in progress\n"
-                     + "Key length: How long is the new key.\n");
+               "Generates a 6-digit Hexadecimal(base 16) String.\n"
+                 + "Used for Bippity's Server Raffle Contest");
       }
    }
 

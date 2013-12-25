@@ -1,17 +1,18 @@
+package server_keygen;
 
 import java.util.Random;
 
 /**
  * Generate a new Key.
  * 
- * @author Hesse D.
+ * @author Hesse D. Edited by Alex Wang
  * @version 1.0
  */
 public class KeyGenerator
 {
 
-   private int n = 0; // länge des Strings.
-   private int zsys = 0; // zahlensystem (Auch a-z möglich (36)
+   private int n = 0; // lï¿½nge des Strings.
+   private int zsys = 0; // zahlensystem (Auch a-z mï¿½glich (36)
    private Random r = new Random();
 
    /**
@@ -37,7 +38,7 @@ public class KeyGenerator
    }
 
    /**
-    * Create the new Key.
+    * Creates the new Key.
     * 
     * @return String with generated key
     */
@@ -46,7 +47,7 @@ public class KeyGenerator
       StringBuffer buf = new StringBuffer();
       for (int i = 0; i <= n - 1; ++i)
       {
-         buf.append(Integer.toString(r.nextInt(zsys), zsys));
+         buf.append(Integer.toString(r.nextInt(zsys), zsys).toUpperCase());
       }
       return buf.toString();
 

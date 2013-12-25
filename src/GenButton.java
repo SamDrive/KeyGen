@@ -1,4 +1,4 @@
-
+package server_keygen;
 import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
 import java.awt.event.KeyEvent;
@@ -13,7 +13,7 @@ import javax.swing.KeyStroke;
 /**
  * Generator Button
  * 
- * @author Hesse D.
+ * @author Hesse D. Edited by Alex Wang
  * @version 0.1
  */
 @SuppressWarnings("serial")
@@ -40,7 +40,7 @@ public class GenButton extends JButton
    {
       private GenerateAction()
       {
-         putValue(Action.NAME, "Generate..");
+         putValue(Action.NAME, "Generate Ticket...");
          putValue(Action.ACCELERATOR_KEY, KeyStroke.getKeyStroke(
                KeyEvent.VK_ENTER, Toolkit.getDefaultToolkit()
                      .getMenuShortcutKeyMask()));
@@ -49,20 +49,33 @@ public class GenButton extends JButton
       @Override
       public void actionPerformed(ActionEvent arg0)
       {
-         if (MainFrame.getLength().length() == 0
+        /* if (MainFrame.getLength().length() == 0
                || MainFrame.getZahlenSystem().length() == 0)
          {
             // throw new IllegalArgumentException("Zu wenig Argumente!");
             JOptionPane.showMessageDialog(getRootPane(),
                   "Need more Input(number system/length)!", "Error!",
                   JOptionPane.ERROR_MESSAGE);
+         }*/
+          /*if (MainFrame.getLength().length() == 0)
+          {
+            JOptionPane.showMessageDialog(getRootPane(),
+                    "Key Length is invalid/empty!", "Error!",
+                    JOptionPane.ERROR_MESSAGE);
+          }
+         else if (MainFrame.getZahlenSystem().length() == 0)
+         {
+             JOptionPane.showMessageDialog(getRootPane(),
+                    "Number System is invalid/empty!", "Error!",
+                    JOptionPane.ERROR_MESSAGE);
          }
          else
          {
+         */
             try
             {
-               int length = Integer.parseInt(MainFrame.getLength());
-               int zahlensys = Integer.parseInt(MainFrame.getZahlenSystem());
+               int length = 6;
+               int zahlensys = 16;
                KeyGenerator key = new KeyGenerator(length, zahlensys);
                MainFrame.setKey(key.createKey());
             }
@@ -75,4 +88,3 @@ public class GenButton extends JButton
 
       }
    }
-}
