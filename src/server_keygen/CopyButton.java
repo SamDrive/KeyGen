@@ -1,5 +1,5 @@
-
 package server_keygen;
+
 import java.awt.Toolkit;
 import java.awt.datatransfer.Clipboard;
 import java.awt.datatransfer.StringSelection;
